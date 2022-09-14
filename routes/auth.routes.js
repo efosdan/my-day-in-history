@@ -2,7 +2,7 @@ const { Router } = require("express");
 const mongoose = require("mongoose");
 
 const router = new Router();
-const bcryptjs = require("bcryptjs");
+const bcryptjs = require("bcrypt");
 const saltRounds = 10;
 const User = require("../models/User.model");
 
