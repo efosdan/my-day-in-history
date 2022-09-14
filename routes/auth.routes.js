@@ -55,4 +55,26 @@ router.post("/signup", (req, res, next) => {
     });
 });
 
+router.post("/login", (req, res, next) => {
+  const { email, password } = req.body;
+  if (email === "" || password === "") {
+    res.render("auth/login", {
+      errorMessage: "please enter Email and Password login",
+    });
+    return;
+  }
+  User.findOne({ email })
+    .then((user) => {
+      if (!user) {
+        res.render("auth/login", { errorMessage: "Email is not registered" });
+        return;
+      } else if (bcryptjs.compareSync(password, user.passwordHash)) {
+        res.render("users/user-profile", { user });
+      } else {
+        res.render("auth/login", { errorMessage: "Incorrect password." });
+      }
+    })
+    .catch((error) => next(error));
+});
+
 module.exports = router;
