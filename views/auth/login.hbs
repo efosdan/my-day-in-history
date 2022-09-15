@@ -1,20 +1,20 @@
 <div id="form">
-  <h2>Kindly login</h2>
-  <form action="/signup" method="POST">
+  <h2>Login</h2>
  
-    
+  <form action="/login" method="POST">
  
     <label> Email
       <input type="email" name="email" placeholder="rockstar@ironhack.com" />
     </label>
  
-    <label> Password
+    <label>Password
       <input type="password" name="password" placeholder="********" />
     </label>
  
-    <button type="submit">login</button>
+    <button type="submit">Login</button>
  
-    
-   
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
   </form>
 </div>
