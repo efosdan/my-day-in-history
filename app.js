@@ -15,6 +15,8 @@ const hbs = require("hbs");
 
 const app = express();
 
+require("./config/session.config")(app);
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
@@ -22,7 +24,7 @@ require("./config")(app);
 const capitalized = require("./utils/capitalized");
 const projectName = "my-day-in-history";
 
-app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalized(projectName)}`;
 
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
