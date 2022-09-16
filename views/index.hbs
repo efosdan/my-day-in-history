@@ -1,172 +1,28 @@
-
-<h1> Your day in history</h1>
-
+<h1> Events in history that happened {{day}}/{{month}}</h1>
 
 <div class="wrapper">
+  <form action="/">
+    <label for="birthday">Select Date:</label>
+    <input type="date" id="date" name="date" date-format="DD MMMM YYYY" />
+    <button type="submit">Submit</button>
+  </form>
   <div class="cards_wrap">
-     <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">yfyvhyvvyv</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
+    {{#each data}}
+      <div class="card_item">
+        <div class="card_inner">
+
+          <div class="card_bottom">
+
+            <div class="card_info">
+              <p style="text-align: right">Year - {{this.year}}</p>
+              <p class="title">{{this.text}}</p>
+
+            </div>
+
           </div>
-         
         </div>
       </div>
-    </div>
+    {{/each}}
 
-    
-     <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-
-     <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-
-     <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="card_item">
-      <div class="card_inner">
-       
-        <div class="card_bottom">
-          
-          <div class="card_info">
-            <p class="title">10 Best Things about Travel</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-    
-    </div>
+  </div>
 </div>
-
-
-
-
-
